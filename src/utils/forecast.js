@@ -11,7 +11,7 @@ const forecast = (latitude, longitude, callback) => {
         } else {
             let currentTemp = responseBody.current.temperature;
             let feelsLikeTemp = responseBody.current.feelslike;
-            callback(undefined, `${responseBody.current.weather_descriptions[0]}. It is currently ${currentTemp} faranheit out. It feels like ${feelsLikeTemp} faranheit out.`);
+            callback(undefined, `${responseBody.current.weather_descriptions[0]}. It is currently ${currentTemp} faranheit out. It feels like ${feelsLikeTemp} faranheit out. Humidity is ${responseBody.current.humidity}%.`);
         }
     })
 }
